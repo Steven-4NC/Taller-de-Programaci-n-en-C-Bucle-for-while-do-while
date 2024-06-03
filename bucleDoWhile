@@ -1,0 +1,255 @@
+#include <stdio.h>// Libreria de funciones
+int main() {
+    
+    // Se define las variables y se les asigna un valor 
+    int num1 = 12567;
+    int sum1 = 0;
+    
+        do {
+            sum1 += num1 % 10;
+            num1 /= 10;
+        } while (num1 > 0);
+        printf("La suma de los digitos es: %d\n", sum1);
+
+    // INVERSO DE UN NUMERO
+    int num2 = 12567;
+    int inver = 0;
+        do {
+            inver = inver * 10 + num2 % 10;
+            num2 /= 10;
+        } while (num2 != 0);
+
+        printf("El inverso del numero es: %d\n", inver);
+    
+    // POTENCIA DE UN NUMERO
+    int base = 2;
+    int exp = 2;
+    int rs = 1;
+    int i = 0;
+        do {
+            int sum = 0;
+            int j = 0;
+            do {
+                sum += rs;
+                j++;
+            } while (j < base);
+            rs = sum;
+            i++;
+        } while (i < exp);
+
+        printf("El resultado de %d^%d es: %d\n", base, exp, rs);
+    //Radicacion mediante restas susesivas
+    int nu6 = 27; // Número fijo
+    int x = 3; // Índice de la raíz fija
+    int res = 0;
+    int x1 = 1;
+        do {
+            res++;
+            nu6 -= res;
+            x1++;
+        } while (nu6 > 0);
+
+        printf("La raiz %d de 27 es: %d\n", x, res - 1);
+
+    //SERIE FIBONACCI
+    int num3 = 10; // Número de términos de la serie de Fibonacci
+    int a = 0, b = 1;
+     printf("Serie de Fibonacci: %d %d", a, b);
+    int f = 2;
+        do {
+            int next = a + b;
+            printf(" %d", next);
+            a = b;
+            b = next;
+            f++;
+        } while (f < num3);
+
+        printf("\n");
+
+    //FACTORIAL DE UN NUMERO
+    int num4 = 5; // Número fijo
+    int fac = 1;
+    int k = 1;
+        do {
+            fac *= k;
+            k++;
+        } while (k <= num4);
+        printf("El factorial de %d es: %d\n", num4, fac);
+
+    //Suma de una serie aritmética
+    int num5 = 10; // Número fijo
+    int sum5 = 0;
+    int l = 1;
+        do {
+            sum5 += l;
+            l++;
+        } while (l <= num5);
+        printf("La suma de la serie aritmetica es: %d\n", sum5);
+
+    //Producto de una serie geométrica
+    int num6 = 5; // Número fijo
+    int a3 = 2; // Primer término
+    int r = 2; // Razón común
+    int prod = 1;
+    int i1 = 0;
+        do {
+            prod *= a3;
+            a3 *= r;
+            i1++;
+        } while (i1 < num6);
+
+        printf("El producto de la serie geometrica es: %d\n", prod);
+
+    //Número de dígitos de un número
+    int num7 = 12567; // Número fijo
+    int cont = 0;
+        do {
+            num7 /= 10;
+            cont++;
+        } while (num7 != 0);
+
+        printf("El numero tiene %d digitos\n", cont);
+
+    //Verificar si un número es primo
+    int numx = 29; // Número fijo
+    int iprimo = 1;
+    int ix = 2;
+        do {
+            if (numx % ix == 0) {
+                iprimo = 0;
+                break;
+            }
+            ix++;
+        } while (ix <= numx / 2);
+
+        if (iprimo) {
+            printf("%d es primo\n", numx);
+        } else {
+            printf("%d no es primo\n", numx);
+        }
+
+    //Encontrar el MCD (Máximo Común Divisor)
+    int a1 = 54; // Número fijo
+    int b1 = 24; // Número fijo
+        do {
+            if (a1 > b1) {
+                a1 -= b1;
+            } else {
+                b1 -= a1;
+            }
+        } while (a1 != b1);
+        printf("El MCD es: %d\n", a1);
+
+    //Sumar los números impares hasta n
+    int num8 = 10; // Número fijo
+    int sum8 = 0;
+
+    int q = 1;
+        do {
+            sum8 += q;
+            q += 2;
+        } while (q <= num8);
+        printf("La suma de los numeros impares hasta %d es: %d\n", num8, sum8);
+
+    //Sumar los números pares hasta n
+    int num9 = 10; // Número fijo
+    int sum9 = 0;
+    int w = 0;
+        do {
+            sum9 += w;
+            w += 2;
+        } while (w <= num9);
+        printf("La suma de los numeros pares hasta %d es: %d\n", num9, sum9);
+
+    //Suma de los cuadrados de los primeros n números
+    int nu1 = 5; // Número fijo
+    int su1 = 0;
+    int h = 1;
+        do {
+            su1 += h * h;
+            h++;
+        } while (h <= nu1);
+        printf("La suma de los cuadrados de los primeros %d numeros es: %d\n", nu1, su1);
+
+    //Suma de los cubos de los primeros n números
+    int nu2 = 4; // Número fijo
+    int su2 = 0;
+    int e = 1;
+        do {
+            su2 += e * e * e;
+            e++;
+        } while (e <= nu2);
+        printf("La suma de los cubos de los primeros %d numeros es: %d\n", nu2, su2);
+
+    //Suma de una serie de números fraccionarios
+    int nu3 = 5; // Número fijo
+    float su3 = 0.0;
+    int t = 1;
+        do {
+            su3 += 1.0 / t;
+            t++;
+        } while (t <= nu3);
+        printf("La suma de la serie fraccionaria es: %.2f\n", su3);
+
+    //Producto de una serie de números fraccionarios
+     int nu4 = 5; // Número fijo
+    float prod1 = 1.0;
+    int o = 1;
+        do {
+            prod1 *= 1.0 / o;
+            o++;
+        } while (o <= nu4);
+        printf("El producto de la serie fraccionaria es: %.6f\n", prod1);
+
+    //Contar los números primos hasta n
+    int nx = 20; // Número fijo
+    int cont2 = 0;
+    int px = 2;
+        do {
+            int ipri = 1;
+            int j = 2;
+            do {
+                if (px % j == 0) {
+                    ipri = 0;
+                    break;
+                }
+                j++;
+            } while (j <= px / 2);
+            if (ipri) {
+                cont2++;
+            }
+            px++;
+        } while (px <= nx);
+        printf("Hay %d numeros primos hasta %d\n", cont2, nx);
+
+    //Calcular el n-ésimo número triangular
+     int nu5 = 7; // Número fijo
+    int tri = 0;
+    int p = 1;
+        do {
+            tri += p;
+            p++;
+        } while (p <= nu5);
+        printf("El %d-esimo numero triangular es: %d\n", nu5, tri);
+
+    //Calcular la suma de los factoriales de los primeros n números
+     int nx1 = 5; // Número fijo
+    int sx = 0;
+    int fx = 1;
+
+        do {
+            int facx = 1;
+            int j = 1;
+            do {
+                facx *= j;
+                j++;
+            } while (j <= fx);
+            sx += facx;
+            fx++;
+        } while (fx <= nx1);
+
+        printf("La suma de los factoriales de los primeros %d numeros es: %d\n", nx1, sx);
+    
+
+    return 0;
+}
