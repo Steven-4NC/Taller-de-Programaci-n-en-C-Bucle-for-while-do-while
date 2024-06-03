@@ -1,1 +1,246 @@
+#include <stdio.h> // Librería de funciones
+
+int main(){
+    // SUMA DE LOS DIGITOS DE UN NUMERO
+    // Se definen las variables y se les asigna un valor 
+    int num = 123; 
+    int sum = 0;
+        // Se establece el bucle
+        for (int n = num; n > 0; n /= 10) {
+            sum += n % 10; // Suma el último dígito
+        }
+        // Se presenta el resultado
+        printf("La suma de los digitos es: %d\n", sum);
+
+    // INVERSO DE UN NUMERO 
+    int num1 = 123; 
+    int inver = 0;
+        // Se establece el bucle
+        for (int n = num1; n != 0; n /= 10) {
+            inver = inver * 10 + n % 10; // Construye el número inverso
+        }
+        // Se presenta el resultado
+        printf("El inverso del numero es: %d\n", inver);
+
+    // POTENCIA DE UN NUMERO
+    int base = 3;
+    int exp = 2;
+    int rs = 1;
+        // Bucle externo para la exponente
+        for (int i = 0; i < exp; i++) {
+            int sum1 = 0;
+            // Bucle interno para la base
+            for (int j = 0; j < base; j++) {
+                sum1 += rs; // Suma sucesiva
+            }
+            rs = sum1;
+        }
+        // Se presenta el resultado
+        printf("El resultado de %d^%d es: %d\n", base, exp, rs);
+
+    // RADICACION MEDIANTE RESTAS SUCESIVAS
+    int numx = 27; // Número fijo
+    int x = 3; // Índice de la raíz fija
+    int res = 0;
+
+        // Bucle para restar sucesivamente
+        for (int i = 1; num > 0; i++) {
+            res++;
+            num -= res; // Resta el resultado acumulado
+        }
+        // Se presenta el resultado
+        printf("La raiz %d de 27 es: %d\n", x, res - 1);
+
+    // SERIE FIBONACCI
+    int num3 = 10; // Número de términos de la serie de Fibonacci
+    int a = 0;
+    int b = 1;
+        // Se presentan los primeros dos términos
+        printf("Serie de Fibonacci: %d %d", a, b);
+        // Bucle para calcular el resto de la serie
+        for (int i = 2; i < num3; i++) {
+            int next = a + b;
+            printf(" %d", next);
+            a = b;
+            b = next;
+        }
+        // Nueva línea
+        printf("\n");
+
+    // FACTORIAL DE UN NUMERO
+    int num4 = 10;
+    int fac = 1;
+    // Bucle para calcular el factorial
+    for (int k = 1; k <= num4; k++) {
+        fac *= k;
+    }
+    // Se presenta el resultado
+    printf("El factorial de %d es: %d\n", num4, fac);
+
+    // SUMA DE UNA SERIE ARITMETICA
+    int num5 = 10;
+    int sum5 = 0;
+    // Bucle para sumar los términos
+    for (int i = 1; i <= num5; i++) {
+        sum5 += i;
+    }
+    // Se presenta el resultado
+    printf("La suma de los primeros %d terminos es: %d\n", num5, sum5);
+
+    // Producto de una serie geometrica
+    int num6 = 4; // Número fijo
+    int bas = 2; // Base de la serie
+    int pro = 1;
+    // Bucle para multiplicar los términos
+    for (int l = 0; l < num6; l++) {
+        pro *= bas;
+    }
+    // Se presenta el resultado
+    printf("El producto de los %d terminos de la serie es: %d\n", num6, pro);
+    
+
+    // Número de dígitos de un número
+    int num7 = 123;
+    int cont = 0;
+        // Bucle para contar los dígitos
+        for (int n = num7; n != 0; n /= 10) {
+            cont++;
+        }
+        // Se presenta el resultado
+        printf("El numero %d tiene %d digitos\n", num7, cont);
+
+    // Verificar si un número es primo
+     int nu7 = 29; // Número fijo
+    int iprimo = 1;
+        // Bucle para verificar divisibilidad
+        for (int i1 = 2; i1 <= nu7 / 2; i1++) {
+            if (nu7 % i1 == 0) {
+                iprimo = 0; // No es primo
+                break;
+            }
+        }
+        // Se presenta el resultado
+        if (iprimo) {
+            printf("%d es primo\n", nu7);
+        } else {
+            printf("%d no es primo\n", nu7);
+        }
+
+    // Encontrar el MCD (Máximo Común Divisor)
+    int a1 = 54; // Primer número fijo
+    int b1 = 24; // Segundo número fijo
+    int mcd = 1;
+    // Bucle para encontrar el MCD
+    for (int i = 1; i <= a && i <= b; i++) {
+        if (a1 % i == 0 && b1 % i == 0) {
+            mcd = i;
+        }
+    }
+    // Se presenta el resultado
+    printf("El MCD de %d y %d es: %d\n", a1, b1, mcd);
+
+    // Sumar los números impares hasta n
+    int num8 = 10;
+    int sum8 = 0;
+        // Bucle para sumar los impares
+        for (int i = 1; i <= num8; i += 2) {
+            sum8 += i;
+        }
+        // Se presenta el resultado
+        printf("La suma de los numeros impares hasta %d es: %d\n", num8, sum8);
+
+    // Sumar los números pares hasta n
+    int num9 = 10;
+    int sum9 = 0;
+     // Bucle para sumar los pares
+        for (int i = 0; i <= num9; i += 2) {
+            sum9 += i;
+        }
+        // Se presenta el resultado
+        printf("La suma de los numeros pares hasta %d es: %d\n", num9, sum9);
+
+    // Suma de los cuadrados
+    int nu1 = 3; // Número fijo
+    int su1 = 0;
+    // Bucle para sumar los cuadrados
+        for (int i = 1; i <= nu1; i++) {
+            su1 += i * i;
+        }
+        // Se presenta el resultado
+        printf("La suma de los cuadrados de los primeros %d numeros es: %d\n", nu1, su1);
+
+    // Suma de los cubos
+    int nu2 = 3;
+    int su2 = 0;
+        // Bucle para sumar los cubos
+        for (int i = 1; i <= nu2; i++) {
+            su2 += i * i * i;
+        }
+        // Se presenta el resultado
+        printf("La suma de los cubos de los primeros %d numeros es: %d\n", nu2, su2);
+
+    // Suma de una serie de números fraccionarios
+    int nu3 = 3;
+    float su3 = 0.0;
+        // Bucle para sumar los fraccionarios
+        for (int i = 1; i <= nu3; i++) {
+            su3 += 1.0 / i;
+        }
+        // Se presenta el resultado
+        printf("La suma de la serie fraccionaria es: %.2f\n", su3);
+
+    // Producto de una serie de números fraccionarios
+    int nu4 = 3; 
+    float pro1 = 1.0;
+    // Bucle para multiplicar los fraccionarios
+    for (int i = 1; i <= nu4; i++) {
+        pro1 *= 1.0 / i;
+    }
+    // Se presenta el resultado
+    printf("El producto de la serie fraccionaria es: %.6f\n", pro1);
+
+    // Contar números primos hasta n
+    int nux = 20; // Número fijo
+    int cont2 = 0;
+    // Bucle para contar los primos
+    for (int i = 2; i <= nux; i++) {
+        int ipri = 1;
+        for (int j = 2; j <= i / 2; j++) {
+            if (i % j == 0) {
+                ipri = 0; // No es primo
+                break;
+            }
+        }
+        if (ipri) {
+            cont2++;
+        }
+    }
+    // Se presenta el resultado
+    printf("Hay %d numeros primos hasta %d\n", cont2, nux);
+
+    // Calcular el n-ésimo número triangular
+    int nu5 = 5;
+    int tri = 0;
+        // Bucle para sumar los términos
+        for (int i = 1; i <= nu5; i++) {
+            tri += i;
+        }
+        // Se presenta el resultado
+        printf("El %d-esimo numero triangular es: %d\n", nu5, tri);
+
+    // Calcular la suma de los factoriales de los primeros n números
+    int nx1 = 5; // Número fijo
+    int sx = 0;
+    // Bucle para sumar los factoriales
+    for (int i = 1; i <= nx1; i++) {
+        int facx = 1;
+        for (int j = 1; j <= i; j++) {
+            facx *= j;
+        }
+        sx += facx;
+    }
+    // Se presenta el resultado
+    printf("La suma de los factoriales de los primeros %d numeros es: %d\n", nx1, sx);
+    return 0;
+}
 
